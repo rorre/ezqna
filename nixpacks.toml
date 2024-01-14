@@ -1,0 +1,11 @@
+providers = ["...", "python"]
+
+[phases.install]
+dependsOn = ["python:install"]
+cmds = ["...", "pip install gunicorn[gevent]==21.2.0", "pip install psycopg2-binary==2.9.9"]
+
+[phases.build]
+cmds = ["...", "npx tailwindcss -i ./readverse/css/style.css -o ./readverse/static/style.css"]
+
+[start]
+cmd = "flask db upgrade && gunicorn -k gevent app:app"

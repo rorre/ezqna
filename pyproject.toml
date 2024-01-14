@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "ezqna"
+version = "0.1.0"
+description = ""
+authors = ["Rendy Arya Kemal <renrror@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+liku = {git = "https://github.com/rorre/liku.git"}
+flask = "^3.0.0"
+flask-sqlalchemy = "^3.1.1"
+flask-migrate = "^4.0.5"
+authlib = "^1.3.0"
+flask-login = "^0.6.3"
+pydantic = "^2.5.3"
+python-dotenv = "^1.0.0"
+requests = "^2.31.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
